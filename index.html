@@ -29,6 +29,8 @@
       color: #667085;
       font-size: 15px;
       margin-bottom: 8px;
+      font-weight: bold;
+      letter-spacing: 0.4px;
     }
 
     h1 {
@@ -106,10 +108,16 @@
       font-size: 25px;
       cursor: pointer;
       flex-shrink: 0;
+      transition: 0.2s;
     }
 
     .audio-button:hover {
       background: #d5e5ff;
+      transform: scale(1.05);
+    }
+
+    .audio-button:active {
+      transform: scale(0.96);
     }
 
     .practice {
@@ -125,9 +133,18 @@
       color: #176b3a;
     }
 
+    .tip {
+      background: #eef4ff;
+      border-radius: 14px;
+      padding: 18px 20px;
+      margin-top: 20px;
+      line-height: 1.6;
+      color: #344054;
+    }
+
     .note {
       text-align: center;
-      margin-top: 30px;
+      margin-top: 35px;
       color: #667085;
       font-size: 14px;
     }
@@ -148,6 +165,11 @@
       .expression {
         font-size: 22px;
       }
+
+      .audio-button {
+        width: 54px;
+        height: 54px;
+      }
     }
   </style>
 </head>
@@ -157,13 +179,17 @@
 <div class="page">
 
   <div class="top">
-    <div class="level">FRANCEZĂ DE LA ZERO 🇫🇷 · A0</div>
+
+    <div class="level">
+      FRANCEZĂ DE LA ZERO 🇫🇷 · A0
+    </div>
 
     <h1>Lecția 1 – Bonjour ! 👋</h1>
 
     <div class="subtitle">
       Primele cuvinte în limba franceză
     </div>
+
   </div>
 
 
@@ -172,13 +198,17 @@
     <h2>🎧 Mai întâi ascultă!</h2>
 
     <p>
-      În franceză, cuvintele <span class="important">nu se pronunță
-      întotdeauna așa cum se scriu</span>.
+      În franceză, cuvintele
+      <span class="important">
+        nu se pronunță întotdeauna așa cum se scriu.
+      </span>
     </p>
 
     <p>
       De aceea, la început este foarte important să
-      <strong>nu încerci să ghicești pronunția citind cuvântul.</strong>
+      <strong>
+        nu încerci să ghicești pronunția citind cuvântul.
+      </strong>
     </p>
 
     <p>
@@ -195,90 +225,122 @@
   </div>
 
 
-  <h2 class="section-title">👋 Saluturi și formule de rămas-bun</h2>
+  <h2 class="section-title">
+    👋 Saluturi și formule de rămas-bun
+  </h2>
 
+
+  <!-- SALUT -->
 
   <div class="card">
+
     <div>
       <div class="expression">Salut !</div>
       <div class="meaning">Salut!</div>
     </div>
 
-    <button class="audio-button"
+    <button
+      class="audio-button"
       onclick="playAudio('salut.mp3')"
       aria-label="Ascultă Salut">
       🔊
     </button>
+
   </div>
 
 
+  <!-- BONJOUR -->
+
   <div class="card">
+
     <div>
       <div class="expression">Bonjour !</div>
       <div class="meaning">Bună! / Bună ziua!</div>
     </div>
 
-    <button class="audio-button"
-      onclick="speakFrench('Bonjour !')"
+    <button
+      class="audio-button"
+      onclick="playAudio('bonjour.mp3')"
       aria-label="Ascultă Bonjour">
       🔊
     </button>
+
   </div>
 
 
+  <!-- BONSOIR -->
+
   <div class="card">
+
     <div>
       <div class="expression">Bonsoir !</div>
       <div class="meaning">Bună seara!</div>
     </div>
 
-    <button class="audio-button"
-      onclick="speakFrench('Bonsoir !')"
+    <button
+      class="audio-button"
+      onclick="playAudio('bonsoir.mp3')"
       aria-label="Ascultă Bonsoir">
       🔊
     </button>
+
   </div>
 
 
+  <!-- AU REVOIR -->
+
   <div class="card">
+
     <div>
       <div class="expression">Au revoir !</div>
       <div class="meaning">La revedere!</div>
     </div>
 
-    <button class="audio-button"
-      onclick="speakFrench('Au revoir !')"
+    <button
+      class="audio-button"
+      onclick="playAudio('au-revoir.mp3')"
       aria-label="Ascultă Au revoir">
       🔊
     </button>
+
   </div>
 
 
+  <!-- A BIENTOT -->
+
   <div class="card">
+
     <div>
       <div class="expression">À bientôt !</div>
       <div class="meaning">Pe curând!</div>
     </div>
 
-    <button class="audio-button"
-      onclick="speakFrench('À bientôt !')"
+    <button
+      class="audio-button"
+      onclick="playAudio('a-bientot.mp3')"
       aria-label="Ascultă À bientôt">
       🔊
     </button>
+
   </div>
 
 
+  <!-- A DEMAIN -->
+
   <div class="card">
+
     <div>
       <div class="expression">À demain !</div>
       <div class="meaning">Pe mâine!</div>
     </div>
 
-    <button class="audio-button"
-      onclick="speakFrench('À demain !')"
+    <button
+      class="audio-button"
+      onclick="playAudio('a-demain.mp3')"
       aria-label="Ascultă À demain">
       🔊
     </button>
+
   </div>
 
 
@@ -298,6 +360,18 @@
   </div>
 
 
+  <div class="tip">
+
+    <strong>💡 Important</strong>
+
+    <p>
+      Nu te grăbi. Pentru fiecare expresie, ascultă de mai multe ori
+      înainte de a trece la următoarea.
+    </p>
+
+  </div>
+
+
   <div class="note">
     Lecția 1 · Franceză de la zero
   </div>
@@ -307,49 +381,43 @@
 
 <script>
 
-  /* AUDIO PROFESIONAL MP3 */
   let currentAudio = null;
 
-  function playAudio(file) {
+  function playAudio(fileName) {
+
+    /*
+      Dacă elevul apasă pe alt buton înainte ca
+      înregistrarea precedentă să se termine,
+      oprim mai întâi înregistrarea precedentă.
+    */
 
     if (currentAudio) {
       currentAudio.pause();
       currentAudio.currentTime = 0;
     }
 
-    currentAudio = new Audio(file);
-    currentAudio.play();
-  }
+    /*
+      Creăm playerul audio și folosim fișierul MP3
+      corespunzător.
+    */
 
+    currentAudio = new Audio(fileName);
 
-  /* VOCEA BROWSERULUI - temporar pentru cuvintele
-     pentru care nu avem încă MP3 */
+    /*
+      Pornim înregistrarea.
+    */
 
-  function speakFrench(text) {
+    currentAudio.play().catch(function(error) {
 
-    if (!('speechSynthesis' in window)) {
-      alert("Acest browser nu poate reda vocea.");
-      return;
-    }
+      console.error("Eroare la redarea fișierului audio:", error);
 
-    speechSynthesis.cancel();
+      alert(
+        "Fișierul audio nu a putut fi redat. " +
+        "Verifică dacă fișierul MP3 există în aceeași locație cu index.html."
+      );
 
-    const utterance = new SpeechSynthesisUtterance(text);
+    });
 
-    utterance.lang = "fr-FR";
-    utterance.rate = 0.78;
-
-    const voices = speechSynthesis.getVoices();
-
-    const frenchVoice =
-      voices.find(v => v.lang === "fr-FR") ||
-      voices.find(v => v.lang.startsWith("fr"));
-
-    if (frenchVoice) {
-      utterance.voice = frenchVoice;
-    }
-
-    speechSynthesis.speak(utterance);
   }
 
 </script>
