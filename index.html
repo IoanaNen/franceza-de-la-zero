@@ -248,6 +248,58 @@
       box-shadow: 0 5px 15px rgba(242,189,53,0.25);
     }
 
+    /* VOCABULAR CLASĂ */
+
+    .vocab-box {
+      background: white;
+      border-radius: 18px;
+      padding: 25px;
+      margin-top: 18px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+    }
+
+    .vocab-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .vocab-card {
+      border: 2px solid #e4e7ec;
+      border-radius: 14px;
+      padding: 18px;
+      text-align: center;
+      transition: all 0.25s ease;
+      background: #ffffff;
+    }
+
+    .vocab-card .icon {
+      display: block;
+      font-size: 42px;
+      margin-bottom: 8px;
+    }
+
+    .vocab-card .fr {
+      display: block;
+      color: #173f70;
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .vocab-card .ro {
+      display: block;
+      color: #667085;
+      font-size: 16px;
+    }
+
+    .vocab-card.active {
+      background: #fff3bf;
+      border-color: #f2bd35;
+      transform: scale(1.04);
+      box-shadow: 0 5px 15px rgba(242,189,53,0.25);
+    }
+
     /* EXERCIȚIU */
 
     .exercise {
@@ -301,7 +353,8 @@
     }
 
     #result,
-    #resultSappeler {
+    #resultSappeler,
+    #resultVocabulary {
       margin-top: 18px;
       padding: 14px;
       border-radius: 10px;
@@ -346,7 +399,8 @@
       }
 
       .pronoun-grid,
-      .verb-grid {
+      .verb-grid,
+      .vocab-grid {
         grid-template-columns: 1fr;
       }
     }
@@ -826,6 +880,153 @@
 
   </div>
 
+
+
+  <!-- PASUL 4 -->
+
+  <h2 class="section-title">
+    🎒 Pasul 4 – Obiecte din clasă
+  </h2>
+
+  <div class="instruction">
+    <h2>🎧 Ascultă și privește</h2>
+    <p>
+      Acum înveți opt obiecte pe care le întâlnești des la școală.
+      Apasă pe butonul de mai jos și urmărește cardurile.
+    </p>
+    <p>
+      Ascultă o dată. A doua oară, repetă fiecare expresie după voce.
+    </p>
+  </div>
+
+  <div class="vocab-box">
+
+    <button class="listen-button" onclick="playVocabulary()">
+      ▶ Ascultă vocabularul
+    </button>
+
+    <div class="vocab-grid">
+
+      <div class="vocab-card" id="v0">
+        <span class="icon">📕</span>
+        <span class="fr">un livre</span>
+        <span class="ro">o carte</span>
+      </div>
+
+      <div class="vocab-card" id="v1">
+        <span class="icon">📓</span>
+        <span class="fr">un cahier</span>
+        <span class="ro">un caiet</span>
+      </div>
+
+      <div class="vocab-card" id="v2">
+        <span class="icon">🖊️</span>
+        <span class="fr">un stylo</span>
+        <span class="ro">un pix</span>
+      </div>
+
+      <div class="vocab-card" id="v3">
+        <span class="icon">✏️</span>
+        <span class="fr">un crayon</span>
+        <span class="ro">un creion</span>
+      </div>
+
+      <div class="vocab-card" id="v4">
+        <span class="icon">🧽</span>
+        <span class="fr">une gomme</span>
+        <span class="ro">o radieră</span>
+      </div>
+
+      <div class="vocab-card" id="v5">
+        <span class="icon">📏</span>
+        <span class="fr">une règle</span>
+        <span class="ro">o riglă</span>
+      </div>
+
+      <div class="vocab-card" id="v6">
+        <span class="icon">🎒</span>
+        <span class="fr">un sac</span>
+        <span class="ro">un ghiozdan</span>
+      </div>
+
+      <div class="vocab-card" id="v7">
+        <span class="icon">👝</span>
+        <span class="fr">une trousse</span>
+        <span class="ro">un penar</span>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="tip">
+    <strong>💡 Observă</strong>
+    <p>
+      Învață cuvântul împreună cu <strong>un</strong> sau <strong>une</strong>.
+      De exemplu: <strong>un livre</strong>, nu doar <strong>livre</strong>.
+    </p>
+  </div>
+
+  <div class="exercise">
+    <h3>✏️ Exercițiul 3 – Alege cuvântul corect</h3>
+    <p>Privește simbolul și alege expresia franceză potrivită.</p>
+
+    <div class="question">
+      <label>1. 📕</label>
+      <select id="voc1">
+        <option value="">Alege...</option>
+        <option value="livre">un livre</option>
+        <option value="cahier">un cahier</option>
+        <option value="sac">un sac</option>
+      </select>
+    </div>
+
+    <div class="question">
+      <label>2. ✏️</label>
+      <select id="voc2">
+        <option value="">Alege...</option>
+        <option value="stylo">un stylo</option>
+        <option value="crayon">un crayon</option>
+        <option value="regle">une règle</option>
+      </select>
+    </div>
+
+    <div class="question">
+      <label>3. 📏</label>
+      <select id="voc3">
+        <option value="">Alege...</option>
+        <option value="gomme">une gomme</option>
+        <option value="regle">une règle</option>
+        <option value="trousse">une trousse</option>
+      </select>
+    </div>
+
+    <div class="question">
+      <label>4. 🎒</label>
+      <select id="voc4">
+        <option value="">Alege...</option>
+        <option value="sac">un sac</option>
+        <option value="livre">un livre</option>
+        <option value="trousse">une trousse</option>
+      </select>
+    </div>
+
+    <div class="question">
+      <label>5. 📓</label>
+      <select id="voc5">
+        <option value="">Alege...</option>
+        <option value="cahier">un cahier</option>
+        <option value="stylo">un stylo</option>
+        <option value="gomme">une gomme</option>
+      </select>
+    </div>
+
+    <button class="check-button" onclick="checkVocabularyExercise()">
+      ✓ Verifică răspunsurile
+    </button>
+
+    <div id="resultVocabulary"></div>
+  </div>
+
   <div class="note">
     Lecția 1 · Franceză de la zero
   </div>
@@ -1118,6 +1319,116 @@
       result.textContent =
         "Ai " + correct +
         " din 5 răspunsuri corecte. Ascultă din nou formele și mai încearcă o dată.";
+      result.classList.add("try-result");
+    }
+  }
+
+
+
+  /* VOCABULAR CLASĂ */
+
+  let vocabularyAudio = null;
+
+  function clearVocabulary() {
+    document.querySelectorAll(".vocab-card").forEach(function(item) {
+      item.classList.remove("active");
+    });
+  }
+
+  function highlightVocabulary(index) {
+    clearVocabulary();
+    const item = document.getElementById("v" + index);
+    if (item) {
+      item.classList.add("active");
+    }
+  }
+
+  function playVocabulary() {
+
+    if (currentAudio) {
+      currentAudio.pause();
+    }
+
+    if (pronounAudio) {
+      pronounAudio.pause();
+      clearPronouns();
+    }
+
+    if (typeof sappelerAudio !== "undefined" && sappelerAudio) {
+      sappelerAudio.pause();
+      clearSappeler();
+    }
+
+    if (vocabularyAudio) {
+      vocabularyAudio.pause();
+      vocabularyAudio.currentTime = 0;
+    }
+
+    clearVocabulary();
+    vocabularyAudio = new Audio("vocabular-clasa.mp3");
+
+    vocabularyAudio.addEventListener("timeupdate", function() {
+      if (!vocabularyAudio.duration || !isFinite(vocabularyAudio.duration)) {
+        return;
+      }
+
+      const segment = vocabularyAudio.duration / 8;
+      const activeIndex = Math.min(
+        7,
+        Math.floor(vocabularyAudio.currentTime / segment)
+      );
+
+      highlightVocabulary(activeIndex);
+    });
+
+    vocabularyAudio.addEventListener("ended", function() {
+      clearVocabulary();
+    });
+
+    vocabularyAudio.play().catch(function(error) {
+      console.error(error);
+      alert(
+        "Nu am putut reda vocabular-clasa.mp3. " +
+        "Verifică dacă fișierul este încărcat în GitHub."
+      );
+    });
+  }
+
+
+  function checkVocabularyExercise() {
+
+    const answers = {
+      voc1: "livre",
+      voc2: "crayon",
+      voc3: "regle",
+      voc4: "sac",
+      voc5: "cahier"
+    };
+
+    let correct = 0;
+
+    for (const question in answers) {
+      const select = document.getElementById(question);
+
+      if (select.value === answers[question]) {
+        correct++;
+        select.style.borderColor = "#2e8540";
+      } else {
+        select.style.borderColor = "#d92d20";
+      }
+    }
+
+    const result = document.getElementById("resultVocabulary");
+    result.className = "";
+
+    if (correct === 5) {
+      result.textContent =
+        "🎉 Foarte bine! Ai 5 din 5 răspunsuri corecte.";
+      result.classList.add("correct-result");
+    } else {
+      result.textContent =
+        "Ai " + correct +
+        " din 5 răspunsuri corecte. Privește din nou vocabularul și mai încearcă o dată.";
       result.classList.add("try-result");
     }
   }
