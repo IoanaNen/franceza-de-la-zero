@@ -72,7 +72,7 @@
     }
 
     h2.section-title {
-      margin-top: 35px;
+      margin-top: 42px;
       color: #173f70;
     }
 
@@ -116,10 +116,6 @@
       transform: scale(1.05);
     }
 
-    .audio-button:active {
-      transform: scale(0.96);
-    }
-
     .practice {
       background: #eaf8ef;
       border-radius: 14px;
@@ -142,9 +138,145 @@
       color: #344054;
     }
 
+    /* PRONUME */
+
+    .pronouns-box {
+      background: white;
+      border-radius: 18px;
+      padding: 25px;
+      margin-top: 18px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+    }
+
+    .listen-button {
+      display: block;
+      margin: 5px auto 25px;
+      border: none;
+      background: #173f70;
+      color: white;
+      border-radius: 12px;
+      padding: 14px 24px;
+      font-size: 17px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .listen-button:hover {
+      background: #24588f;
+    }
+
+    .pronoun-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .pronoun {
+      border: 2px solid #e4e7ec;
+      border-radius: 14px;
+      padding: 17px;
+      text-align: center;
+      transition: all 0.25s ease;
+      background: #ffffff;
+    }
+
+    .pronoun .fr {
+      display: block;
+      color: #173f70;
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .pronoun .ro {
+      display: block;
+      color: #667085;
+      font-size: 16px;
+    }
+
+    /* Pronumele care este rostit */
+    .pronoun.active {
+      background: #fff3bf;
+      border-color: #f2bd35;
+      transform: scale(1.05);
+      box-shadow: 0 5px 15px rgba(242,189,53,0.25);
+    }
+
+    /* EXERCIȚIU */
+
+    .exercise {
+      background: white;
+      border-radius: 18px;
+      padding: 25px;
+      margin-top: 25px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+    }
+
+    .exercise h3 {
+      margin-top: 0;
+      color: #173f70;
+      font-size: 22px;
+    }
+
+    .question {
+      margin: 20px 0;
+    }
+
+    .question label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    .question select {
+      width: 100%;
+      max-width: 320px;
+      padding: 11px;
+      border-radius: 9px;
+      border: 2px solid #d0d5dd;
+      font-size: 16px;
+      background: white;
+    }
+
+    .check-button {
+      border: none;
+      background: #176b3a;
+      color: white;
+      border-radius: 10px;
+      padding: 13px 22px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .check-button:hover {
+      background: #12572f;
+    }
+
+    #result {
+      margin-top: 18px;
+      padding: 14px;
+      border-radius: 10px;
+      font-weight: bold;
+      display: none;
+    }
+
+    .correct-result {
+      display: block !important;
+      background: #eaf8ef;
+      color: #176b3a;
+    }
+
+    .try-result {
+      display: block !important;
+      background: #fff7dc;
+      color: #7a5900;
+    }
+
     .note {
       text-align: center;
-      margin-top: 35px;
+      margin-top: 40px;
       color: #667085;
       font-size: 14px;
     }
@@ -166,9 +298,8 @@
         font-size: 22px;
       }
 
-      .audio-button {
-        width: 54px;
-        height: 54px;
+      .pronoun-grid {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -179,7 +310,6 @@
 <div class="page">
 
   <div class="top">
-
     <div class="level">
       FRANCEZĂ DE LA ZERO 🇫🇷 · A0
     </div>
@@ -189,9 +319,10 @@
     <div class="subtitle">
       Primele cuvinte în limba franceză
     </div>
-
   </div>
 
+
+  <!-- PASUL 1 -->
 
   <div class="instruction">
 
@@ -211,9 +342,7 @@
       </strong>
     </p>
 
-    <p>
-      Mai întâi ascultă. Apoi repetă.
-    </p>
+    <p>Mai întâi ascultă. Apoi repetă.</p>
 
     <div class="steps">
       <div>① Apasă pe 🔊 și ascultă.</div>
@@ -226,126 +355,71 @@
 
 
   <h2 class="section-title">
-    👋 Saluturi și formule de rămas-bun
+    👋 Pasul 1 – Saluturi și formule de rămas-bun
   </h2>
 
 
-  <!-- SALUT -->
-
   <div class="card">
-
     <div>
       <div class="expression">Salut !</div>
       <div class="meaning">Salut!</div>
     </div>
-
-    <button
-      class="audio-button"
-      onclick="playAudio('salut.mp3')"
-      aria-label="Ascultă Salut">
-      🔊
-    </button>
-
+    <button class="audio-button"
+      onclick="playAudio('salut.mp3')">🔊</button>
   </div>
 
 
-  <!-- BONJOUR -->
-
   <div class="card">
-
     <div>
       <div class="expression">Bonjour !</div>
       <div class="meaning">Bună! / Bună ziua!</div>
     </div>
-
-    <button
-      class="audio-button"
-      onclick="playAudio('bonjour.mp3')"
-      aria-label="Ascultă Bonjour">
-      🔊
-    </button>
-
+    <button class="audio-button"
+      onclick="playAudio('bonjour.mp3')">🔊</button>
   </div>
 
 
-  <!-- BONSOIR -->
-
   <div class="card">
-
     <div>
       <div class="expression">Bonsoir !</div>
       <div class="meaning">Bună seara!</div>
     </div>
-
-    <button
-      class="audio-button"
-      onclick="playAudio('bonsoir.mp3')"
-      aria-label="Ascultă Bonsoir">
-      🔊
-    </button>
-
+    <button class="audio-button"
+      onclick="playAudio('bonsoir.mp3')">🔊</button>
   </div>
 
 
-  <!-- AU REVOIR -->
-
   <div class="card">
-
     <div>
       <div class="expression">Au revoir !</div>
       <div class="meaning">La revedere!</div>
     </div>
-
-    <button
-      class="audio-button"
-      onclick="playAudio('au-revoir.mp3')"
-      aria-label="Ascultă Au revoir">
-      🔊
-    </button>
-
+    <button class="audio-button"
+      onclick="playAudio('au-revoir.mp3')">🔊</button>
   </div>
 
 
-  <!-- A BIENTOT -->
-
   <div class="card">
-
     <div>
       <div class="expression">À bientôt !</div>
       <div class="meaning">Pe curând!</div>
     </div>
-
-    <button
-      class="audio-button"
-      onclick="playAudio('a-bientot.mp3')"
-      aria-label="Ascultă À bientôt">
-      🔊
-    </button>
-
+    <button class="audio-button"
+      onclick="playAudio('a-bientot.mp3')">🔊</button>
   </div>
 
 
-  <!-- A DEMAIN -->
-
   <div class="card">
-
     <div>
       <div class="expression">À demain !</div>
       <div class="meaning">Pe mâine!</div>
     </div>
-
-    <button
-      class="audio-button"
-      onclick="playAudio('a-demain.mp3')"
-      aria-label="Ascultă À demain">
-      🔊
-    </button>
-
+    <button class="audio-button"
+      onclick="playAudio('a-demain.mp3')">🔊</button>
   </div>
 
 
   <div class="practice">
-
     <h2>🗣️ Acum repetă!</h2>
 
     <p>
@@ -356,18 +430,187 @@
       Nu trebuie să o pronunți perfect din prima.
       Încearcă să imiți cât mai bine vocea pe care o auzi.
     </p>
+  </div>
+
+
+  <!-- PASUL 2 -->
+
+  <h2 class="section-title">
+    👤 Pasul 2 – Pronumele personale
+  </h2>
+
+
+  <div class="instruction">
+
+    <h2>🎧 Ascultă înainte să memorezi</h2>
+
+    <p>
+      Acum vei învăța cum spunem în franceză:
+      <strong>eu, tu, el, ea, noi, voi, ei, ele.</strong>
+    </p>
+
+    <p>
+      Apasă pe butonul de mai jos și urmărește pronumele
+      care se evidențiază.
+    </p>
+
+    <p>
+      Ascultă prima dată fără să repeți.
+      A doua oară, repetă fiecare pronume după voce.
+    </p>
+
+  </div>
+
+
+  <div class="pronouns-box">
+
+    <button class="listen-button" onclick="playPronouns()">
+      ▶ Ascultă pronumele
+    </button>
+
+
+    <div class="pronoun-grid">
+
+      <div class="pronoun" id="p0">
+        <span class="fr">je</span>
+        <span class="ro">eu</span>
+      </div>
+
+      <div class="pronoun" id="p1">
+        <span class="fr">tu</span>
+        <span class="ro">tu</span>
+      </div>
+
+      <div class="pronoun" id="p2">
+        <span class="fr">il</span>
+        <span class="ro">el</span>
+      </div>
+
+      <div class="pronoun" id="p3">
+        <span class="fr">elle</span>
+        <span class="ro">ea</span>
+      </div>
+
+      <div class="pronoun" id="p4">
+        <span class="fr">nous</span>
+        <span class="ro">noi</span>
+      </div>
+
+      <div class="pronoun" id="p5">
+        <span class="fr">vous</span>
+        <span class="ro">voi / dumneavoastră</span>
+      </div>
+
+      <div class="pronoun" id="p6">
+        <span class="fr">ils</span>
+        <span class="ro">ei</span>
+      </div>
+
+      <div class="pronoun" id="p7">
+        <span class="fr">elles</span>
+        <span class="ro">ele</span>
+      </div>
+
+    </div>
 
   </div>
 
 
   <div class="tip">
 
-    <strong>💡 Important</strong>
+    <strong>💡 Observă</strong>
 
     <p>
-      Nu te grăbi. Pentru fiecare expresie, ascultă de mai multe ori
-      înainte de a trece la următoarea.
+      În franceză există două forme pentru „ei / ele”:
+      <strong>ils</strong> pentru masculin sau grup mixt și
+      <strong>elles</strong> pentru un grup format numai din persoane
+      de gen feminin.
     </p>
+
+    <p>
+      <strong>vous</strong> poate însemna atât „voi”, cât și
+      forma politicoasă „dumneavoastră”.
+    </p>
+
+  </div>
+
+
+  <!-- EXERCIȚIUL 1 -->
+
+  <div class="exercise">
+
+    <h3>✏️ Exercițiul 1 – Alege pronumele corect</h3>
+
+    <p>
+      Alege pronumele francez care corespunde cuvântului în română.
+    </p>
+
+
+    <div class="question">
+      <label>1. eu</label>
+
+      <select id="q1">
+        <option value="">Alege...</option>
+        <option value="tu">tu</option>
+        <option value="je">je</option>
+        <option value="nous">nous</option>
+      </select>
+    </div>
+
+
+    <div class="question">
+      <label>2. ea</label>
+
+      <select id="q2">
+        <option value="">Alege...</option>
+        <option value="il">il</option>
+        <option value="elle">elle</option>
+        <option value="elles">elles</option>
+      </select>
+    </div>
+
+
+    <div class="question">
+      <label>3. noi</label>
+
+      <select id="q3">
+        <option value="">Alege...</option>
+        <option value="vous">vous</option>
+        <option value="nous">nous</option>
+        <option value="ils">ils</option>
+      </select>
+    </div>
+
+
+    <div class="question">
+      <label>4. ei</label>
+
+      <select id="q4">
+        <option value="">Alege...</option>
+        <option value="elles">elles</option>
+        <option value="ils">ils</option>
+        <option value="il">il</option>
+      </select>
+    </div>
+
+
+    <div class="question">
+      <label>5. ele</label>
+
+      <select id="q5">
+        <option value="">Alege...</option>
+        <option value="ils">ils</option>
+        <option value="elle">elle</option>
+        <option value="elles">elles</option>
+      </select>
+    </div>
+
+
+    <button class="check-button" onclick="checkExercise()">
+      ✓ Verifică răspunsurile
+    </button>
+
+    <div id="result"></div>
 
   </div>
 
@@ -381,42 +624,167 @@
 
 <script>
 
+  /* AUDIO GENERAL */
+
   let currentAudio = null;
 
   function playAudio(fileName) {
-
-    /*
-      Dacă elevul apasă pe alt buton înainte ca
-      înregistrarea precedentă să se termine,
-      oprim mai întâi înregistrarea precedentă.
-    */
 
     if (currentAudio) {
       currentAudio.pause();
       currentAudio.currentTime = 0;
     }
 
-    /*
-      Creăm playerul audio și folosim fișierul MP3
-      corespunzător.
-    */
-
     currentAudio = new Audio(fileName);
 
-    /*
-      Pornim înregistrarea.
-    */
-
     currentAudio.play().catch(function(error) {
+      console.error(error);
+      alert("Fișierul audio nu a putut fi redat.");
+    });
+  }
 
-      console.error("Eroare la redarea fișierului audio:", error);
+
+  /* PRONUME CU EVIDENȚIERE SINCRONIZATĂ */
+
+  let pronounAudio = null;
+
+  const pronounTimes = [
+    0.00,
+    0.86,
+    1.50,
+    2.22,
+    2.90,
+    3.57,
+    4.44,
+    5.19
+  ];
+
+
+  function clearPronouns() {
+
+    document.querySelectorAll(".pronoun").forEach(function(item) {
+      item.classList.remove("active");
+    });
+
+  }
+
+
+  function highlightPronoun(index) {
+
+    clearPronouns();
+
+    const item = document.getElementById("p" + index);
+
+    if (item) {
+      item.classList.add("active");
+    }
+
+  }
+
+
+  function playPronouns() {
+
+    if (currentAudio) {
+      currentAudio.pause();
+    }
+
+    if (pronounAudio) {
+      pronounAudio.pause();
+      pronounAudio.currentTime = 0;
+    }
+
+    clearPronouns();
+
+    pronounAudio = new Audio("pronume-personale.mp3");
+
+
+    pronounAudio.addEventListener("timeupdate", function() {
+
+      const time = pronounAudio.currentTime;
+
+      let activeIndex = 0;
+
+      for (let i = 0; i < pronounTimes.length; i++) {
+
+        if (time >= pronounTimes[i]) {
+          activeIndex = i;
+        }
+
+      }
+
+      highlightPronoun(activeIndex);
+
+    });
+
+
+    pronounAudio.addEventListener("ended", function() {
+
+      clearPronouns();
+
+    });
+
+
+    pronounAudio.play().catch(function(error) {
+
+      console.error(error);
 
       alert(
-        "Fișierul audio nu a putut fi redat. " +
-        "Verifică dacă fișierul MP3 există în aceeași locație cu index.html."
+        "Nu am putut reda pronume-personale.mp3. " +
+        "Verifică dacă fișierul este încărcat în GitHub."
       );
 
     });
+
+  }
+
+
+  /* AUTOCORECTAREA EXERCIȚIULUI */
+
+  function checkExercise() {
+
+    const answers = {
+      q1: "je",
+      q2: "elle",
+      q3: "nous",
+      q4: "ils",
+      q5: "elles"
+    };
+
+    let correct = 0;
+
+    for (const question in answers) {
+
+      const select = document.getElementById(question);
+
+      if (select.value === answers[question]) {
+        correct++;
+        select.style.borderColor = "#2e8540";
+      } else {
+        select.style.borderColor = "#d92d20";
+      }
+
+    }
+
+    const result = document.getElementById("result");
+
+    result.className = "";
+
+    if (correct === 5) {
+
+      result.textContent =
+        "🎉 Foarte bine! Ai 5 din 5 răspunsuri corecte.";
+
+      result.classList.add("correct-result");
+
+    } else {
+
+      result.textContent =
+        "Ai " + correct +
+        " din 5 răspunsuri corecte. Uită-te din nou la pronume și mai încearcă o dată.";
+
+      result.classList.add("try-result");
+
+    }
 
   }
 
