@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Lecția 1 – Saluturi, prezentare și obiecte din clasă</title>
+  <title>Lecția 1 – Saluturi și prezentare</title>
 
   <style>
     body {
@@ -433,6 +433,66 @@
       cursor: pointer;
     }
     .mini-audio:hover { background: #d9eafb; }
+
+
+    /* EXERCIȚII INTERACTIVE S'APPELER */
+    .interactive-exercise {
+      background: white;
+      border-radius: 18px;
+      padding: 24px;
+      margin-top: 22px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+    }
+    .sentence-task {
+      background: #f8fafc;
+      border: 1px solid #e4e7ec;
+      border-radius: 14px;
+      padding: 16px;
+      margin: 14px 0;
+    }
+    .word-bank, .answer-zone {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      min-height: 54px;
+      padding: 10px;
+      border-radius: 12px;
+      margin-top: 10px;
+    }
+    .word-bank { background: #eef4fb; }
+    .answer-zone {
+      background: white;
+      border: 2px dashed #b8c5d6;
+    }
+    .word-card {
+      border: 1px solid #cbd5e1;
+      background: white;
+      color: #173f70;
+      border-radius: 10px;
+      padding: 9px 13px;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0,0,0,.05);
+    }
+    .word-card.selected {
+      background: #173f70;
+      color: white;
+    }
+    .task-audio {
+      border: 0;
+      background: #eaf3fb;
+      color: #173f70;
+      border-radius: 9px;
+      padding: 8px 12px;
+      font-weight: 700;
+      cursor: pointer;
+      margin-top: 8px;
+    }
+    .feedback {
+      margin-top: 9px;
+      font-weight: 700;
+      min-height: 22px;
+    }
 
 </style>
 </head>
@@ -929,154 +989,192 @@
 
 
 
-  <!-- PASUL 4 -->
-
-  <h2 class="section-title">
-    🎒 Pasul 4 – Obiecte din clasă
-  </h2>
-
-  <div class="instruction">
-    <h2>🎧 Ascultă și privește</h2>
-    <p>
-      Acum înveți opt obiecte pe care le întâlnești des la școală.
-      Apasă pe butonul de mai jos și urmărește cardurile.
-    </p>
-    <p>
-      Ascultă o dată. A doua oară, repetă fiecare expresie după voce.
-    </p>
+  <div class="interactive-exercise">
+    <h3>🧩 Exercițiul 3 – Pune cuvintele în ordine</h3>
+    <p>Apasă pe cuvinte în ordinea corectă pentru a construi propoziția. Apoi ascultă propoziția.</p>
+    <div class="sentence-task" data-answer="Je|m'appelle|Marie">
+      <strong>1.</strong>
+      <div class="word-bank">
+        <button class="word-card" type="button">m'appelle</button>
+        <button class="word-card" type="button">Marie</button>
+        <button class="word-card" type="button">Je</button>
+      </div>
+      <div class="answer-zone"></div>
+      <button class="task-audio" type="button" onclick="playAudio('phrase-je-mappelle-marie.mp3')">▶ Ascultă propoziția</button>
+      <div class="feedback"></div>
+    </div>
+    <div class="sentence-task" data-answer="Tu|t'appelles|Paul">
+      <strong>2.</strong>
+      <div class="word-bank">
+        <button class="word-card" type="button">Paul</button>
+        <button class="word-card" type="button">Tu</button>
+        <button class="word-card" type="button">t'appelles</button>
+      </div>
+      <div class="answer-zone"></div>
+      <button class="task-audio" type="button" onclick="playAudio('phrase-tu-tappelles-paul.mp3')">▶ Ascultă propoziția</button>
+      <div class="feedback"></div>
+    </div>
+    <div class="sentence-task" data-answer="Il|s'appelle|Lucas">
+      <strong>3.</strong>
+      <div class="word-bank">
+        <button class="word-card" type="button">s'appelle</button>
+        <button class="word-card" type="button">Lucas</button>
+        <button class="word-card" type="button">Il</button>
+      </div>
+      <div class="answer-zone"></div>
+      <button class="task-audio" type="button" onclick="playAudio('phrase-il-sappelle-lucas.mp3')">▶ Ascultă propoziția</button>
+      <div class="feedback"></div>
+    </div>
+    <div class="sentence-task" data-answer="Elle|s'appelle|Sophie">
+      <strong>4.</strong>
+      <div class="word-bank">
+        <button class="word-card" type="button">Sophie</button>
+        <button class="word-card" type="button">Elle</button>
+        <button class="word-card" type="button">s'appelle</button>
+      </div>
+      <div class="answer-zone"></div>
+      <button class="task-audio" type="button" onclick="playAudio('phrase-elle-sappelle-sophie.mp3')">▶ Ascultă propoziția</button>
+      <div class="feedback"></div>
+    </div>
+    <div class="sentence-task" data-answer="Nous|nous|appelons|Emma|et|Léa">
+      <strong>5.</strong>
+      <div class="word-bank">
+        <button class="word-card" type="button">Emma</button>
+        <button class="word-card" type="button">nous</button>
+        <button class="word-card" type="button">Léa</button>
+        <button class="word-card" type="button">appelons</button>
+        <button class="word-card" type="button">Nous</button>
+        <button class="word-card" type="button">et</button>
+      </div>
+      <div class="answer-zone"></div>
+      <button class="task-audio" type="button" onclick="playAudio('phrase-nous-nous-appelons-emma-et-lea.mp3')">▶ Ascultă propoziția</button>
+      <div class="feedback"></div>
+    </div>
+    <div class="sentence-task" data-answer="Vous|vous|appelez|Pierre">
+      <strong>6.</strong>
+      <div class="word-bank">
+        <button class="word-card" type="button">Pierre</button>
+        <button class="word-card" type="button">appelez</button>
+        <button class="word-card" type="button">Vous</button>
+        <button class="word-card" type="button">vous</button>
+      </div>
+      <div class="answer-zone"></div>
+      <button class="task-audio" type="button" onclick="playAudio('phrase-vous-vous-appelez-pierre.mp3')">▶ Ascultă propoziția</button>
+      <div class="feedback"></div>
+    </div>
+    <div class="sentence-task" data-answer="Ils|s'appellent|Hugo|et|Louis">
+      <strong>7.</strong>
+      <div class="word-bank">
+        <button class="word-card" type="button">Louis</button>
+        <button class="word-card" type="button">s'appellent</button>
+        <button class="word-card" type="button">Ils</button>
+        <button class="word-card" type="button">Hugo</button>
+        <button class="word-card" type="button">et</button>
+      </div>
+      <div class="answer-zone"></div>
+      <button class="task-audio" type="button" onclick="playAudio('phrase-ils-sappellent-hugo-et-louis.mp3')">▶ Ascultă propoziția</button>
+      <div class="feedback"></div>
+    </div>
+    <div class="sentence-task" data-answer="Elles|s'appellent|Julie|et|Clara">
+      <strong>8.</strong>
+      <div class="word-bank">
+        <button class="word-card" type="button">Clara</button>
+        <button class="word-card" type="button">Elles</button>
+        <button class="word-card" type="button">Julie</button>
+        <button class="word-card" type="button">s'appellent</button>
+        <button class="word-card" type="button">et</button>
+      </div>
+      <div class="answer-zone"></div>
+      <button class="task-audio" type="button" onclick="playAudio('phrase-elles-sappellent-julie-et-clara.mp3')">▶ Ascultă propoziția</button>
+      <div class="feedback"></div>
+    </div>
+    <button class="check-button" type="button" onclick="checkWordOrder()">✓ Verifică propozițiile</button>
   </div>
 
-  <div class="vocab-box">
-
-    <button class="listen-button" onclick="playVocabulary()">
-      ▶ Ascultă vocabularul
-    </button>
-    <div class="audio-player-box">
-      <p>Poți opri, relua sau derula înregistrarea:</p>
-      <audio controls preload="metadata" src="vocabular-clasa.mp3"></audio>
+  <div class="interactive-exercise">
+    <h3>🎯 Exercițiul 4 – Alege cuvântul care lipsește</h3>
+    <p>Apasă pe cardul corect. Cardul ales va intra în spațiul liber. Poți asculta propoziția completă.</p>
+    <div class="sentence-task missing-task" data-answer="vous">
+      <p><strong>1.</strong> Vous <span class="missing-slot">__________</span> appelez Pierre.</p>
+      <div class="word-bank choice-bank">
+        <button class="word-card" type="button">nous</button>
+        <button class="word-card" type="button">vous</button>
+        <button class="word-card" type="button">me</button>
+      </div>
+      <button class="task-audio" type="button" onclick="playAudio('phrase-vous-vous-appelez-pierre.mp3')">▶ Ascultă propoziția</button>
+      <div class="feedback"></div>
     </div>
-
-
-    <div class="vocab-grid">
-
-      <div class="vocab-card" id="v0">
-        <span class="icon">📕</span>
-        <span class="fr">un livre</span>
-        <span class="ro">o carte</span>
-      <button class="mini-audio" onclick="playAudio('un-livre.mp3')">▶ Ascultă</button></div>
-
-      <div class="vocab-card" id="v1">
-        <span class="icon">📓</span>
-        <span class="fr">un cahier</span>
-        <span class="ro">un caiet</span>
-      <button class="mini-audio" onclick="playAudio('un-cahier.mp3')">▶ Ascultă</button></div>
-
-      <div class="vocab-card" id="v2">
-        <span class="icon">🖊️</span>
-        <span class="fr">un stylo</span>
-        <span class="ro">un pix</span>
-      <button class="mini-audio" onclick="playAudio('un-stylo.mp3')">▶ Ascultă</button></div>
-
-      <div class="vocab-card" id="v3">
-        <span class="icon">✏️</span>
-        <span class="fr">un crayon</span>
-        <span class="ro">un creion</span>
-      <button class="mini-audio" onclick="playAudio('un-crayon.mp3')">▶ Ascultă</button></div>
-
-      <div class="vocab-card" id="v4">
-        <span class="icon">🧽</span>
-        <span class="fr">une gomme</span>
-        <span class="ro">o radieră</span>
-      <button class="mini-audio" onclick="playAudio('une-gomme.mp3')">▶ Ascultă</button></div>
-
-      <div class="vocab-card" id="v5">
-        <span class="icon">📏</span>
-        <span class="fr">une règle</span>
-        <span class="ro">o riglă</span>
-      <button class="mini-audio" onclick="playAudio('une-regle.mp3')">▶ Ascultă</button></div>
-
-      <div class="vocab-card" id="v6">
-        <span class="icon">🎒</span>
-        <span class="fr">un sac</span>
-        <span class="ro">un ghiozdan</span>
-      <button class="mini-audio" onclick="playAudio('un-sac.mp3')">▶ Ascultă</button></div>
-
-      <div class="vocab-card" id="v7">
-        <span class="icon">👝</span>
-        <span class="fr">une trousse</span>
-        <span class="ro">un penar</span>
-      <button class="mini-audio" onclick="playAudio('une-trousse.mp3')">▶ Ascultă</button></div>
-
+    <div class="sentence-task missing-task" data-answer="m'appelle">
+      <p><strong>2.</strong> Je <span class="missing-slot">__________</span> Marie.</p>
+      <div class="word-bank choice-bank">
+        <button class="word-card" type="button">m'appelle</button>
+        <button class="word-card" type="button">t'appelles</button>
+        <button class="word-card" type="button">s'appelle</button>
+      </div>
+      <button class="task-audio" type="button" onclick="playAudio('phrase-je-mappelle-marie.mp3')">▶ Ascultă propoziția</button>
+      <div class="feedback"></div>
     </div>
-  </div>
-
-  <div class="tip">
-    <strong>💡 Observă</strong>
-    <p>
-      Învață cuvântul împreună cu <strong>un</strong> sau <strong>une</strong>.
-      De exemplu: <strong>un livre</strong>, nu doar <strong>livre</strong>.
-    </p>
-  </div>
-
-  <div class="exercise">
-    <h3>✏️ Exercițiul 3 – Alege cuvântul corect</h3>
-    <p>Privește simbolul și alege expresia franceză potrivită.</p>
-
-    <div class="question">
-      <label>1. 📕</label>
-      <select id="voc1">
-        <option value="">Alege...</option>
-        <option value="livre">un livre</option>
-        <option value="cahier">un cahier</option>
-        <option value="sac">un sac</option>
-      </select>
+    <div class="sentence-task missing-task" data-answer="t'appelles">
+      <p><strong>3.</strong> Tu <span class="missing-slot">__________</span> Paul.</p>
+      <div class="word-bank choice-bank">
+        <button class="word-card" type="button">nous appelons</button>
+        <button class="word-card" type="button">t'appelles</button>
+        <button class="word-card" type="button">s'appellent</button>
+      </div>
+      <button class="task-audio" type="button" onclick="playAudio('phrase-tu-tappelles-paul.mp3')">▶ Ascultă propoziția</button>
+      <div class="feedback"></div>
     </div>
-
-    <div class="question">
-      <label>2. ✏️</label>
-      <select id="voc2">
-        <option value="">Alege...</option>
-        <option value="stylo">un stylo</option>
-        <option value="crayon">un crayon</option>
-        <option value="regle">une règle</option>
-      </select>
+    <div class="sentence-task missing-task" data-answer="s'appelle">
+      <p><strong>4.</strong> Elle <span class="missing-slot">__________</span> Sophie.</p>
+      <div class="word-bank choice-bank">
+        <button class="word-card" type="button">s'appelle</button>
+        <button class="word-card" type="button">vous appelez</button>
+        <button class="word-card" type="button">m'appelle</button>
+      </div>
+      <button class="task-audio" type="button" onclick="playAudio('phrase-elle-sappelle-sophie.mp3')">▶ Ascultă propoziția</button>
+      <div class="feedback"></div>
     </div>
-
-    <div class="question">
-      <label>3. 📏</label>
-      <select id="voc3">
-        <option value="">Alege...</option>
-        <option value="gomme">une gomme</option>
-        <option value="regle">une règle</option>
-        <option value="trousse">une trousse</option>
-      </select>
+    <div class="sentence-task missing-task" data-answer="s'appelle">
+      <p><strong>5.</strong> Il <span class="missing-slot">__________</span> Lucas.</p>
+      <div class="word-bank choice-bank">
+        <button class="word-card" type="button">t'appelles</button>
+        <button class="word-card" type="button">s'appelle</button>
+        <button class="word-card" type="button">nous appelons</button>
+      </div>
+      <button class="task-audio" type="button" onclick="playAudio('phrase-il-sappelle-lucas.mp3')">▶ Ascultă propoziția</button>
+      <div class="feedback"></div>
     </div>
-
-    <div class="question">
-      <label>4. 🎒</label>
-      <select id="voc4">
-        <option value="">Alege...</option>
-        <option value="sac">un sac</option>
-        <option value="livre">un livre</option>
-        <option value="trousse">une trousse</option>
-      </select>
+    <div class="sentence-task missing-task" data-answer="nous">
+      <p><strong>6.</strong> Nous <span class="missing-slot">__________</span> appelons Emma et Léa.</p>
+      <div class="word-bank choice-bank">
+        <button class="word-card" type="button">vous</button>
+        <button class="word-card" type="button">nous</button>
+        <button class="word-card" type="button">s'</button>
+      </div>
+      <button class="task-audio" type="button" onclick="playAudio('phrase-nous-nous-appelons-emma-et-lea.mp3')">▶ Ascultă propoziția</button>
+      <div class="feedback"></div>
     </div>
-
-    <div class="question">
-      <label>5. 📓</label>
-      <select id="voc5">
-        <option value="">Alege...</option>
-        <option value="cahier">un cahier</option>
-        <option value="stylo">un stylo</option>
-        <option value="gomme">une gomme</option>
-      </select>
+    <div class="sentence-task missing-task" data-answer="s'appellent">
+      <p><strong>7.</strong> Ils <span class="missing-slot">__________</span> Hugo et Louis.</p>
+      <div class="word-bank choice-bank">
+        <button class="word-card" type="button">m'appelle</button>
+        <button class="word-card" type="button">s'appellent</button>
+        <button class="word-card" type="button">vous appelez</button>
+      </div>
+      <button class="task-audio" type="button" onclick="playAudio('phrase-ils-sappellent-hugo-et-louis.mp3')">▶ Ascultă propoziția</button>
+      <div class="feedback"></div>
     </div>
-
-    <button class="check-button" onclick="checkVocabularyExercise()">
-      ✓ Verifică răspunsurile
-    </button>
-
-    <div id="resultVocabulary"></div>
+    <div class="sentence-task missing-task" data-answer="s'appellent">
+      <p><strong>8.</strong> Elles <span class="missing-slot">__________</span> Julie et Clara.</p>
+      <div class="word-bank choice-bank">
+        <button class="word-card" type="button">s'appelle</button>
+        <button class="word-card" type="button">t'appelles</button>
+        <button class="word-card" type="button">s'appellent</button>
+      </div>
+      <button class="task-audio" type="button" onclick="playAudio('phrase-elles-sappellent-julie-et-clara.mp3')">▶ Ascultă propoziția</button>
+      <div class="feedback"></div>
+    </div>
+    <button class="check-button" type="button" onclick="checkMissingWords()">✓ Verifică răspunsurile</button>
   </div>
 
   <div class="note">
@@ -1485,6 +1583,67 @@
     }
   }
 
+
+
+  /* EXERCIȚIUL 3 – ORDINEA CUVINTELOR */
+  document.querySelectorAll(".sentence-task[data-answer]:not(.missing-task)").forEach(function(task) {
+    const bank = task.querySelector(".word-bank");
+    const zone = task.querySelector(".answer-zone");
+
+    task.querySelectorAll(".word-card").forEach(function(card) {
+      card.addEventListener("click", function() {
+        if (card.parentElement === bank) {
+          zone.appendChild(card);
+        } else {
+          bank.appendChild(card);
+        }
+      });
+    });
+  });
+
+  function checkWordOrder() {
+    document.querySelectorAll(".sentence-task[data-answer]:not(.missing-task)").forEach(function(task) {
+      const expected = task.dataset.answer.split("|");
+      const actual = Array.from(task.querySelector(".answer-zone").children).map(function(card) {
+        return card.textContent.trim();
+      });
+      const feedback = task.querySelector(".feedback");
+
+      if (actual.length === expected.length && actual.every(function(word, i) { return word === expected[i]; })) {
+        feedback.textContent = "✓ Corect!";
+        feedback.style.color = "#2e8540";
+      } else {
+        feedback.textContent = "Mai încearcă. Poți apăsa pe un cuvânt pentru a-l muta înapoi.";
+        feedback.style.color = "#b54708";
+      }
+    });
+  }
+
+  /* EXERCIȚIUL 4 – CUVÂNTUL LIPSĂ */
+  document.querySelectorAll(".missing-task").forEach(function(task) {
+    const slot = task.querySelector(".missing-slot");
+    task.querySelectorAll(".word-card").forEach(function(card) {
+      card.addEventListener("click", function() {
+        task.querySelectorAll(".word-card").forEach(function(c) { c.classList.remove("selected"); });
+        card.classList.add("selected");
+        slot.textContent = card.textContent.trim();
+        task.dataset.selected = card.textContent.trim();
+      });
+    });
+  });
+
+  function checkMissingWords() {
+    document.querySelectorAll(".missing-task").forEach(function(task) {
+      const feedback = task.querySelector(".feedback");
+      if (task.dataset.selected === task.dataset.answer) {
+        feedback.textContent = "✓ Corect!";
+        feedback.style.color = "#2e8540";
+      } else {
+        feedback.textContent = "Mai încearcă.";
+        feedback.style.color = "#b54708";
+      }
+    });
+  }
 
 </script>
 
