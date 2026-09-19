@@ -205,7 +205,7 @@
     </div>
 
     <button class="audio-button"
-      onclick="speakFrench('Salut !')"
+      onclick="playAudio('salut.mp3')"
       aria-label="Ascultă Salut">
       🔊
     </button>
@@ -306,6 +306,24 @@
 
 
 <script>
+
+  /* AUDIO PROFESIONAL MP3 */
+  let currentAudio = null;
+
+  function playAudio(file) {
+
+    if (currentAudio) {
+      currentAudio.pause();
+      currentAudio.currentTime = 0;
+    }
+
+    currentAudio = new Audio(file);
+    currentAudio.play();
+  }
+
+
+  /* VOCEA BROWSERULUI - temporar pentru cuvintele
+     pentru care nu avem încă MP3 */
 
   function speakFrench(text) {
 
