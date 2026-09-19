@@ -202,6 +202,52 @@
       box-shadow: 0 5px 15px rgba(242,189,53,0.25);
     }
 
+    /* S'APPELER */
+
+    .verb-box {
+      background: white;
+      border-radius: 18px;
+      padding: 25px;
+      margin-top: 18px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+    }
+
+    .verb-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .verb-form {
+      border: 2px solid #e4e7ec;
+      border-radius: 14px;
+      padding: 17px;
+      text-align: center;
+      transition: all 0.25s ease;
+      background: #ffffff;
+    }
+
+    .verb-form .fr {
+      display: block;
+      color: #173f70;
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .verb-form .ro {
+      display: block;
+      color: #667085;
+      font-size: 16px;
+    }
+
+    .verb-form.active {
+      background: #fff3bf;
+      border-color: #f2bd35;
+      transform: scale(1.05);
+      box-shadow: 0 5px 15px rgba(242,189,53,0.25);
+    }
+
     /* EXERCIȚIU */
 
     .exercise {
@@ -254,7 +300,8 @@
       background: #12572f;
     }
 
-    #result {
+    #result,
+    #resultSappeler {
       margin-top: 18px;
       padding: 14px;
       border-radius: 10px;
@@ -298,7 +345,8 @@
         font-size: 22px;
       }
 
-      .pronoun-grid {
+      .pronoun-grid,
+      .verb-grid {
         grid-template-columns: 1fr;
       }
     }
@@ -615,6 +663,169 @@
   </div>
 
 
+
+
+  <!-- PASUL 3 -->
+
+  <h2 class="section-title">
+    💬 Pasul 3 – Cum spui cum te numești?
+  </h2>
+
+  <div class="instruction">
+
+    <h2>🎧 Ascultă expresiile</h2>
+
+    <p>
+      Verbul <strong>s'appeler</strong> înseamnă <strong>„a se numi”</strong>.
+    </p>
+
+    <p>
+      Pentru început, cea mai importantă expresie este
+      <strong>Je m'appelle...</strong> = <strong>„Mă numesc...”</strong>.
+    </p>
+
+    <p>
+      Apasă pe butonul de mai jos. Urmărește forma care se evidențiază
+      și ascultă înainte să încerci să o citești.
+    </p>
+
+  </div>
+
+  <div class="verb-box">
+
+    <button class="listen-button" onclick="playSappeler()">
+      ▶ Ascultă verbul s'appeler
+    </button>
+
+    <div class="verb-grid">
+
+      <div class="verb-form" id="s0">
+        <span class="fr">Je m'appelle</span>
+        <span class="ro">mă numesc</span>
+      </div>
+
+      <div class="verb-form" id="s1">
+        <span class="fr">Tu t'appelles</span>
+        <span class="ro">te numești</span>
+      </div>
+
+      <div class="verb-form" id="s2">
+        <span class="fr">Il s'appelle</span>
+        <span class="ro">el se numește</span>
+      </div>
+
+      <div class="verb-form" id="s3">
+        <span class="fr">Elle s'appelle</span>
+        <span class="ro">ea se numește</span>
+      </div>
+
+      <div class="verb-form" id="s4">
+        <span class="fr">Nous nous appelons</span>
+        <span class="ro">noi ne numim</span>
+      </div>
+
+      <div class="verb-form" id="s5">
+        <span class="fr">Vous vous appelez</span>
+        <span class="ro">voi vă numiți / dumneavoastră vă numiți</span>
+      </div>
+
+      <div class="verb-form" id="s6">
+        <span class="fr">Ils s'appellent</span>
+        <span class="ro">ei se numesc</span>
+      </div>
+
+      <div class="verb-form" id="s7">
+        <span class="fr">Elles s'appellent</span>
+        <span class="ro">ele se numesc</span>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="tip">
+
+    <strong>💡 Reține pentru început</strong>
+
+    <p>
+      Când vrei să spui cum te numești, folosești:
+      <strong>Je m'appelle + numele tău.</strong>
+    </p>
+
+    <p>
+      Exemplu: <strong>Je m'appelle Ana.</strong>
+      Nu trebuie să memorezi toate formele dintr-o dată.
+      Ascultă-le și observă cum se schimbă expresia pentru fiecare pronume.
+    </p>
+
+  </div>
+
+  <div class="exercise">
+
+    <h3>✏️ Exercițiul 2 – Alege forma corectă</h3>
+
+    <p>
+      Alege forma verbului <strong>s'appeler</strong> care se potrivește pronumelui.
+    </p>
+
+    <div class="question">
+      <label>1. Je ... Maria.</label>
+      <select id="sapp1">
+        <option value="">Alege...</option>
+        <option value="mappelle">m'appelle</option>
+        <option value="tappelles">t'appelles</option>
+        <option value="sappelle">s'appelle</option>
+      </select>
+    </div>
+
+    <div class="question">
+      <label>2. Tu ... Alex.</label>
+      <select id="sapp2">
+        <option value="">Alege...</option>
+        <option value="mappelle">m'appelle</option>
+        <option value="tappelles">t'appelles</option>
+        <option value="vousappelez">vous appelez</option>
+      </select>
+    </div>
+
+    <div class="question">
+      <label>3. Elle ... Sophie.</label>
+      <select id="sapp3">
+        <option value="">Alege...</option>
+        <option value="sappelle">s'appelle</option>
+        <option value="nousappelons">nous appelons</option>
+        <option value="sappellent">s'appellent</option>
+      </select>
+    </div>
+
+    <div class="question">
+      <label>4. Nous ... Léa et Paul.</label>
+      <select id="sapp4">
+        <option value="">Alege...</option>
+        <option value="nousappelons">nous appelons</option>
+        <option value="vousappelez">vous appelez</option>
+        <option value="sappellent">s'appellent</option>
+      </select>
+    </div>
+
+    <div class="question">
+      <label>5. Ils ... Lucas et Hugo.</label>
+      <select id="sapp5">
+        <option value="">Alege...</option>
+        <option value="sappelle">s'appelle</option>
+        <option value="tappelles">t'appelles</option>
+        <option value="sappellent">s'appellent</option>
+      </select>
+    </div>
+
+    <button class="check-button" onclick="checkSappelerExercise()">
+      ✓ Verifică răspunsurile
+    </button>
+
+    <div id="resultSappeler"></div>
+
+  </div>
+
   <div class="note">
     Lecția 1 · Franceză de la zero
   </div>
@@ -738,7 +949,89 @@
   }
 
 
+  /* S'APPELER CU EVIDENȚIERE SINCRONIZATĂ */
+
+  let sappelerAudio = null;
+
+  const sappelerTimes = [
+    0.00,
+    1.77,
+    3.27,
+    4.99,
+    6.65,
+    8.28,
+    9.99,
+    11.63
+  ];
+
+  function clearSappeler() {
+    document.querySelectorAll(".verb-form").forEach(function(item) {
+      item.classList.remove("active");
+    });
+  }
+
+  function highlightSappeler(index) {
+    clearSappeler();
+
+    const item = document.getElementById("s" + index);
+
+    if (item) {
+      item.classList.add("active");
+    }
+  }
+
+  function playSappeler() {
+
+    if (currentAudio) {
+      currentAudio.pause();
+    }
+
+    if (pronounAudio) {
+      pronounAudio.pause();
+      pronounAudio.currentTime = 0;
+      clearPronouns();
+    }
+
+    if (sappelerAudio) {
+      sappelerAudio.pause();
+      sappelerAudio.currentTime = 0;
+    }
+
+    clearSappeler();
+
+    sappelerAudio = new Audio("sappeler.mp3");
+
+    sappelerAudio.addEventListener("timeupdate", function() {
+
+      const time = sappelerAudio.currentTime;
+      let activeIndex = 0;
+
+      for (let i = 0; i < sappelerTimes.length; i++) {
+        if (time >= sappelerTimes[i]) {
+          activeIndex = i;
+        }
+      }
+
+      highlightSappeler(activeIndex);
+    });
+
+    sappelerAudio.addEventListener("ended", function() {
+      clearSappeler();
+    });
+
+    sappelerAudio.play().catch(function(error) {
+      console.error(error);
+      alert(
+        "Nu am putut reda sappeler.mp3. " +
+        "Verifică dacă fișierul este încărcat în GitHub."
+      );
+    });
+  }
+
+
   /* AUTOCORECTAREA EXERCIȚIULUI */
+
+
 
   function checkExercise() {
 
@@ -787,6 +1080,48 @@
     }
 
   }
+
+
+  function checkSappelerExercise() {
+
+    const answers = {
+      sapp1: "mappelle",
+      sapp2: "tappelles",
+      sapp3: "sappelle",
+      sapp4: "nousappelons",
+      sapp5: "sappellent"
+    };
+
+    let correct = 0;
+
+    for (const question in answers) {
+
+      const select = document.getElementById(question);
+
+      if (select.value === answers[question]) {
+        correct++;
+        select.style.borderColor = "#2e8540";
+      } else {
+        select.style.borderColor = "#d92d20";
+      }
+    }
+
+    const result = document.getElementById("resultSappeler");
+
+    result.className = "";
+
+    if (correct === 5) {
+      result.textContent =
+        "🎉 Foarte bine! Ai 5 din 5 răspunsuri corecte.";
+      result.classList.add("correct-result");
+    } else {
+      result.textContent =
+        "Ai " + correct +
+        " din 5 răspunsuri corecte. Ascultă din nou formele și mai încearcă o dată.";
+      result.classList.add("try-result");
+    }
+  }
+
 
 </script>
 
