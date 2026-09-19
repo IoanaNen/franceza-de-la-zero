@@ -404,7 +404,37 @@
         grid-template-columns: 1fr;
       }
     }
-  </style>
+  
+    /* CONTROALE AUDIO NOI */
+    .audio-player-box {
+      background: #f7f9fc;
+      border: 1px solid #e4e7ec;
+      border-radius: 14px;
+      padding: 14px;
+      margin: 14px 0 20px;
+    }
+    .audio-player-box p {
+      margin: 0 0 8px;
+      color: #667085;
+      font-size: 14px;
+    }
+    .audio-player-box audio {
+      width: 100%;
+      display: block;
+    }
+    .mini-audio {
+      margin-top: 10px;
+      border: 0;
+      border-radius: 9px;
+      padding: 8px 12px;
+      background: #eaf3fb;
+      color: #173f70;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .mini-audio:hover { background: #d9eafb; }
+
+</style>
 </head>
 
 <body>
@@ -576,6 +606,11 @@
     <button class="listen-button" onclick="playPronouns()">
       ▶ Ascultă pronumele
     </button>
+    <div class="audio-player-box">
+      <p>Poți opri, relua sau derula înregistrarea:</p>
+      <audio controls preload="metadata" src="pronume-personale.mp3"></audio>
+    </div>
+
 
 
     <div class="pronoun-grid">
@@ -583,42 +618,42 @@
       <div class="pronoun" id="p0">
         <span class="fr">je</span>
         <span class="ro">eu</span>
-      </div>
+      <button class="mini-audio" onclick="playAudio('je.mp3')">▶ Ascultă</button></div>
 
       <div class="pronoun" id="p1">
         <span class="fr">tu</span>
         <span class="ro">tu</span>
-      </div>
+      <button class="mini-audio" onclick="playAudio('tu.mp3')">▶ Ascultă</button></div>
 
       <div class="pronoun" id="p2">
         <span class="fr">il</span>
         <span class="ro">el</span>
-      </div>
+      <button class="mini-audio" onclick="playAudio('il.mp3')">▶ Ascultă</button></div>
 
       <div class="pronoun" id="p3">
         <span class="fr">elle</span>
         <span class="ro">ea</span>
-      </div>
+      <button class="mini-audio" onclick="playAudio('elle.mp3')">▶ Ascultă</button></div>
 
       <div class="pronoun" id="p4">
         <span class="fr">nous</span>
         <span class="ro">noi</span>
-      </div>
+      <button class="mini-audio" onclick="playAudio('nous.mp3')">▶ Ascultă</button></div>
 
       <div class="pronoun" id="p5">
         <span class="fr">vous</span>
         <span class="ro">voi / dumneavoastră</span>
-      </div>
+      <button class="mini-audio" onclick="playAudio('vous.mp3')">▶ Ascultă</button></div>
 
       <div class="pronoun" id="p6">
         <span class="fr">ils</span>
         <span class="ro">ei</span>
-      </div>
+      <button class="mini-audio" onclick="playAudio('ils.mp3')">▶ Ascultă</button></div>
 
       <div class="pronoun" id="p7">
         <span class="fr">elles</span>
         <span class="ro">ele</span>
-      </div>
+      <button class="mini-audio" onclick="playAudio('elles.mp3')">▶ Ascultă</button></div>
 
     </div>
 
@@ -757,48 +792,53 @@
     <button class="listen-button" onclick="playSappeler()">
       ▶ Ascultă verbul s'appeler
     </button>
+    <div class="audio-player-box">
+      <p>Poți opri, relua sau derula înregistrarea:</p>
+      <audio controls preload="metadata" src="sappeler.mp3"></audio>
+    </div>
+
 
     <div class="verb-grid">
 
       <div class="verb-form" id="s0">
         <span class="fr">Je m'appelle</span>
         <span class="ro">mă numesc</span>
-      </div>
+      <button class="mini-audio" onclick="playAudio('je-mappelle.mp3')">▶ Ascultă</button></div>
 
       <div class="verb-form" id="s1">
         <span class="fr">Tu t'appelles</span>
         <span class="ro">te numești</span>
-      </div>
+      <button class="mini-audio" onclick="playAudio('tu-tappelles.mp3')">▶ Ascultă</button></div>
 
       <div class="verb-form" id="s2">
         <span class="fr">Il s'appelle</span>
         <span class="ro">el se numește</span>
-      </div>
+      <button class="mini-audio" onclick="playAudio('il-sappelle.mp3')">▶ Ascultă</button></div>
 
       <div class="verb-form" id="s3">
         <span class="fr">Elle s'appelle</span>
         <span class="ro">ea se numește</span>
-      </div>
+      <button class="mini-audio" onclick="playAudio('elle-sappelle.mp3')">▶ Ascultă</button></div>
 
       <div class="verb-form" id="s4">
         <span class="fr">Nous nous appelons</span>
         <span class="ro">noi ne numim</span>
-      </div>
+      <button class="mini-audio" onclick="playAudio('nous-nous-appelons.mp3')">▶ Ascultă</button></div>
 
       <div class="verb-form" id="s5">
         <span class="fr">Vous vous appelez</span>
         <span class="ro">voi vă numiți / dumneavoastră vă numiți</span>
-      </div>
+      <button class="mini-audio" onclick="playAudio('vous-vous-appelez.mp3')">▶ Ascultă</button></div>
 
       <div class="verb-form" id="s6">
         <span class="fr">Ils s'appellent</span>
         <span class="ro">ei se numesc</span>
-      </div>
+      <button class="mini-audio" onclick="playAudio('ils-sappellent.mp3')">▶ Ascultă</button></div>
 
       <div class="verb-form" id="s7">
         <span class="fr">Elles s'appellent</span>
         <span class="ro">ele se numesc</span>
-      </div>
+      <button class="mini-audio" onclick="playAudio('elles-sappellent.mp3')">▶ Ascultă</button></div>
 
     </div>
 
@@ -911,6 +951,11 @@
     <button class="listen-button" onclick="playVocabulary()">
       ▶ Ascultă vocabularul
     </button>
+    <div class="audio-player-box">
+      <p>Poți opri, relua sau derula înregistrarea:</p>
+      <audio controls preload="metadata" src="vocabular-clasa.mp3"></audio>
+    </div>
+
 
     <div class="vocab-grid">
 
@@ -918,49 +963,49 @@
         <span class="icon">📕</span>
         <span class="fr">un livre</span>
         <span class="ro">o carte</span>
-      </div>
+      <button class="mini-audio" onclick="playAudio('un-livre.mp3')">▶ Ascultă</button></div>
 
       <div class="vocab-card" id="v1">
         <span class="icon">📓</span>
         <span class="fr">un cahier</span>
         <span class="ro">un caiet</span>
-      </div>
+      <button class="mini-audio" onclick="playAudio('un-cahier.mp3')">▶ Ascultă</button></div>
 
       <div class="vocab-card" id="v2">
         <span class="icon">🖊️</span>
         <span class="fr">un stylo</span>
         <span class="ro">un pix</span>
-      </div>
+      <button class="mini-audio" onclick="playAudio('un-stylo.mp3')">▶ Ascultă</button></div>
 
       <div class="vocab-card" id="v3">
         <span class="icon">✏️</span>
         <span class="fr">un crayon</span>
         <span class="ro">un creion</span>
-      </div>
+      <button class="mini-audio" onclick="playAudio('un-crayon.mp3')">▶ Ascultă</button></div>
 
       <div class="vocab-card" id="v4">
         <span class="icon">🧽</span>
         <span class="fr">une gomme</span>
         <span class="ro">o radieră</span>
-      </div>
+      <button class="mini-audio" onclick="playAudio('une-gomme.mp3')">▶ Ascultă</button></div>
 
       <div class="vocab-card" id="v5">
         <span class="icon">📏</span>
         <span class="fr">une règle</span>
         <span class="ro">o riglă</span>
-      </div>
+      <button class="mini-audio" onclick="playAudio('une-regle.mp3')">▶ Ascultă</button></div>
 
       <div class="vocab-card" id="v6">
         <span class="icon">🎒</span>
         <span class="fr">un sac</span>
         <span class="ro">un ghiozdan</span>
-      </div>
+      <button class="mini-audio" onclick="playAudio('un-sac.mp3')">▶ Ascultă</button></div>
 
       <div class="vocab-card" id="v7">
         <span class="icon">👝</span>
         <span class="fr">une trousse</span>
         <span class="ro">un penar</span>
-      </div>
+      <button class="mini-audio" onclick="playAudio('une-trousse.mp3')">▶ Ascultă</button></div>
 
     </div>
   </div>
